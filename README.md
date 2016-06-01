@@ -35,7 +35,7 @@ sections and get rid of style conflicts once and for all!
 ### Add library to your page
 
 ``` html
-<script src="/node_modules/betsol-ng-ui-router-styles/dist/betsol-ng-ui-router-styles.js"></script>
+<script src="/node_modules/betsol-ng-ui-router-styles/dist/scripts/betsol-ng-ui-router-styles.js"></script>
 ```
 
 You should use minified version (`betsol-ng-ui-router-styles.min.js`) in production.

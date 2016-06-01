@@ -2,7 +2,7 @@
   "name": "betsol-ng-ui-router-styles",
   "description": "Load custom CSS for different routes",
   "version": "0.2.1",
-  "main": "dist/betsol-ng-ui-router-styles.js",
+  "main": "dist/scripts/betsol-ng-ui-router-styles.js",
   "ignore": [
     "src",
     "test",
@@ -11,12 +11,13 @@
     "karma.conf.js",
     "package.json"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "betsol-load-stylesheet": "^1.0.0"
+  },
   "devDependencies": {
     "angular": "~1",
     "angular-mocks": "~1.4.6",
-    "angular-ui-router": "^0.2.18",
-    "betsol-load-stylesheet": "^1.0.0"
+    "angular-ui-router": "^0.2.18"
   },
   "repository": {
     "type": "git",
