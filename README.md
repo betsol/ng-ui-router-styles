@@ -92,7 +92,7 @@ angular
                 dashboard: null,
 
                 // Adding another named resource:
-                about: '/css/about.css',
+                about: '/css/about.css'
               }
             }
           })
@@ -161,6 +161,7 @@ Run:
 - `npm i && bower install` to initialize the project
 - `gulp build` to re-build the dist files
 - `gulp test` or `karma start` to test the code
+- `gulp test:e2e:server` to run test server on [http://localhost:1337](http://localhost:1337)
 
 Do not add dist files to the PR itself.
 We will re-compile the module manually each time before releasing.

@@ -1,6 +1,6 @@
 /**
  * betsol-ng-ui-router-styles - Load custom CSS for different routes
- * @version v0.2.1
+ * @version v0.2.2
  * @link https://github.com/betsol/ng-ui-router-styles
  * @license MIT
  *
@@ -26,7 +26,7 @@
       // Using data decorator to normalize style definitions.
       $stateProvider.decorator('data', function (state, parent) {
         var data = parent(state);
-        if ('undefined' !== typeof data.css) {
+        if (data && 'undefined' !== typeof data.css) {
           data.css = normalizeStyleDefinitions(data.css);
         }
         return data;
