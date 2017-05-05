@@ -56,11 +56,16 @@
       $provide.decorator('$state', function ($delegate) {
         var originalTransitionTo = $delegate.transitionTo;
         $delegate.transitionTo = function () {
-          var optionsIndex = 2;
-          arguments[optionsIndex] = angular.extend({
-            reload: true
-          }, arguments[optionsIndex]);
-          return originalTransitionTo.apply(originalTransitionTo, arguments);
+          // Make sure we're dealing with a state that has a name
+          if (angular.isString(arguments[0])) {
+            var optionsIndex = 2;
+            arguments[optionsIndex] = angular.extend({
+              reload: arguments[0]
+            }, arguments[optionsIndex]);
+            return originalTransitionTo.apply(originalTransitionTo, arguments);
+          }
+          // Return original object if nothing has been changed
+          return originalTransitionTo;
         };
         return $delegate;
       });
