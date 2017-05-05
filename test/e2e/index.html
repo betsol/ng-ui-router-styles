@@ -27,6 +27,9 @@
         <li>
             <a ui-sref="qux">bar/baz/qux</a>
         </li>
+        <li>
+            <a ui-sref="quux">quux (no stylesheet)</a>
+        </li>
     </ul>
 
     <script src="/vendor/angular/angular.js"></script>
@@ -87,6 +90,9 @@
                                     { url: '/css/margin.css' }
                                 ]
                             }
+                        })
+                        .state('quux', {
+                            url: '/quux'
                         })
                     ;
                 })

@@ -18,7 +18,7 @@
       // Using data decorator to normalize style definitions.
       $stateProvider.decorator('data', function (state, parent) {
         var data = parent(state);
-        if ('undefined' !== typeof data.css) {
+        if (data && 'undefined' !== typeof data.css) {
           data.css = normalizeStyleDefinitions(data.css);
         }
         return data;
